@@ -4,7 +4,6 @@ FROM debian:bullseye-slim
 RUN apt-get update && apt-get install -y \
     openssh-server \
     ltrace \
-    package3 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 run echo "Welcome with the <3 from wyene, thanks you for using my awesome open source tools to create sandbox">/etc/motd 

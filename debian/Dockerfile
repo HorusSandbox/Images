@@ -10,6 +10,8 @@ run echo "Welcome with the <3 from wyene, thanks you for using my awesome open s
 
 RUN ssh-keygen -A && sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 
+RUN mkdir -p /run/sshd
+
 # Exposez le port SSH (par défaut : 22)
 EXPOSE 22
 

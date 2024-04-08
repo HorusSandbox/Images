@@ -16,6 +16,8 @@ RUN mkdir -p /run/sshd
 # Exposez le port SSH (par défaut : 22)
 EXPOSE 23
 
+RUN echo 'root:Docker!' | chpasswd
+
 # Activez et démarrez le service SSH au démarrage du conteneur
 #CMD ["/usr/sbin/sshd", "-D"]
 CMD ["/usr/sbin/in.telnetd", "-debug", "23"]
